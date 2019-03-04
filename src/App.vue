@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <PhotoGallery images="
+      https://placeimg.com/1600/900/arch,
+      https://placeimg.com/1600/900/tech,
+      https://placeimg.com/1600/900/people,
+      https://placeimg.com/1600/900/animals,
+      https://placeimg.com/1600/900/nature,
+      https://placeimg.com/1600/901/arch,
+      https://placeimg.com/1600/901/tech,
+      https://placeimg.com/1600/901/people,
+      https://placeimg.com/1600/901/animals,
+      https://placeimg.com/1600/901/nature
+    "/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PhotoGallery from './components/PhotoGallery.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    PhotoGallery
   }
 }
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 </style>
